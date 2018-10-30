@@ -13,6 +13,6 @@ public interface ContentMapper extends Mapper<Content> {
      * 
      * @return
      */
-    public List<Content> queryContentList(Long categoryId);
+     List<Content> queryContentList(Long categoryId);
 
 }

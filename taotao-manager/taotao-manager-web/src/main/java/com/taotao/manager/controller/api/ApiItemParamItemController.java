@@ -1,4 +1,4 @@
-package com.taotao.manager.controller;
+package com.taotao.manager.controller.api;
 
 import com.taotao.manager.pojo.ItemParamItem;
 import com.taotao.manager.service.ItemParamItemService;
@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 
-
-@RequestMapping("item/param/item")
+@RequestMapping("api/item/param/item")
 @Controller
-public class ItemParamItemController {
+public class ApiItemParamItemController {
 
     @Autowired
     private ItemParamItemService itemParamItemService;
