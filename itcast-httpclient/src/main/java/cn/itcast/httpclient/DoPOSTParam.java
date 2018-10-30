@@ -22,10 +22,15 @@ public class DoPOSTParam {
         // 创建http POST请求
         HttpPost httpPost = new HttpPost("http://www.oschina.net/search");
 
+        //伪装成浏览器
+        httpPost.setHeader("User-Agent","Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36");
+
         // 设置2个post参数，一个是scope、一个是q
         List<NameValuePair> parameters = new ArrayList<NameValuePair>(0);
         parameters.add(new BasicNameValuePair("scope", "project"));
         parameters.add(new BasicNameValuePair("q", "java"));
+        parameters.add(new BasicNameValuePair("fromerr", "Wy1OSXeN"));
+
         // 构造一个form表单式的实体
         UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(parameters);
         // 将请求实体设置到httpPost对象中

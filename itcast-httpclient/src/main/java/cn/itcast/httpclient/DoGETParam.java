@@ -17,7 +17,9 @@ public class DoGETParam {
         CloseableHttpClient httpclient = HttpClients.createDefault();
 
         // 定义请求的参数
-        URI uri = new URIBuilder("http://www.baidu.com/s").setParameter("wd", "java").build();
+        //URI uri = new URIBuilder("http://www.baidu.com/s").setParameter("wd", "java").build();
+        URI uri = new URIBuilder("http://manage.taotao.com/rest/content").setParameter("categoryId", "123")
+                .setParameter("page","1").setParameter("rows","20").build();
 
         System.out.println(uri);
 
