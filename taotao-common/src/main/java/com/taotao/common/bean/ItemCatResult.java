@@ -18,4 +18,10 @@ public class ItemCatResult {
 		this.itemCats = itemCats;
 	}
 
+	@Override
+	public String toString() {
+		return "ItemCatResult{" +
+				"itemCats=" + itemCats +
+				'}';
+	}
 }

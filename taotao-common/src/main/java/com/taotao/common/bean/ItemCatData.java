@@ -10,7 +10,7 @@ public class ItemCatData  {
 	private String url;
 	
 	@JsonProperty("n")
-	private String nname;
+	private String name;
 	
 	@JsonProperty("i")
 	private List<?> items;
@@ -23,12 +23,12 @@ public class ItemCatData  {
 		this.url = url;
 	}
 
-	public String getNname() {
-		return nname;
+	public String getName() {
+		return name;
 	}
 
-	public void setNname(String nname) {
-		this.nname = nname;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public List<?> getItems() {
@@ -38,7 +38,13 @@ public class ItemCatData  {
 	public void setItems(List<?> items) {
 		this.items = items;
 	}
-	
-	
 
+	@Override
+	public String toString() {
+		return "ItemCatData{" +
+				"url='" + url + '\'' +
+				", name='" + name + '\'' +
+				", items=" + items +
+				'}';
+	}
 }
