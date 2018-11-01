@@ -1,11 +1,11 @@
 var TT = TAOTAO = {
 	checkLogin : function(){
-		var _ticket = $.cookie("TT_TICKET");
-		if(!_ticket){
+		var _token = $.cookie("TT_TOKEN");
+		if(!_token){
 			return ;
 		}
 		$.ajax({
-			url : "http://sso.taotao.com/user/query/" + _ticket,
+			url : "http://sso.taotao.com/service/user/" + _token,
 			dataType : "jsonp",
 			type : "GET",
 			success : function(data){
@@ -17,7 +17,7 @@ var TT = TAOTAO = {
 			}
 		});
 	}
-}
+};
 
 $(function(){
 	// 查看是否已经登录，如果已经登录查询登录信息
